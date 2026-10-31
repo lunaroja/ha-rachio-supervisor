@@ -2,8 +2,9 @@
 
 This fork extends the existing Rachio Supervisor companion integration. Home
 Assistant's built-in Rachio integration continues to own device access and
-watering. There is no Home Assistant Core fork, release or upstream pull request
-for this work. These changes are based on upstream main
+watering. There is no Home Assistant Core fork or personal release. The weather-unit
+fix is submitted separately in [upstream PR #1](https://github.com/david00769/ha-rachio-supervisor/pull/1);
+the schedule, zone and upcoming-run changes remain in this fork. These changes are based on upstream main
 `f0c3fbbef7e667f3f9768df6abcfa9c6f9ca510d`, rather than a new personal release line.
 
 ## Implemented behavior
@@ -76,7 +77,7 @@ It uses a standalone calendar platform with synthetic data, without full Rachio
 config-entry/device setup or vendor requests. It does not establish a live
 household installation, dashboard rendering or physical watering result. Before
 deployment, check integration/config-entry reload and native calendar/zone
-attributes in the target environment, then review phone/tablet rendering. Production deployment, upstream submission and releases
+attributes in the target environment, then review phone/tablet rendering. Production deployment, submission of the other changes and releases
 remain separate decisions. Existing household operation stays on its published
 upstream version until an explicit deployment step is authorized and verified.
 

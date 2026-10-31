@@ -51,3 +51,9 @@ open upstream PRs, publish releases, or deploy to live Home Assistant without
 Abraham's further instruction. Preserve upstream licensing and attribution.
 Run `python3.13 -m unittest -q tests.test_supervisor_logic`, compileall, and
 `node --check custom_components/rachio_supervisor/www/rachio-supervisor-zone-grid-card.js`.
+
+Abraham subsequently authorized only the focused weather-unit upstream PR
+on October 31: david00769/ha-rachio-supervisor#1, branch `fix-weather-units`.
+That branch starts from upstream main and excludes this personal scaffold and
+the other feature work. Further PRs, releases and live deployment remain
+unauthorized. Keep external PRs clear, simple and narrowly scoped.
