@@ -75,3 +75,14 @@ Use this gate for:
 The public screenshots under `docs/assets/screenshots/` are sanitized product
 captures. Do not replace them with live Home Assistant screenshots that include
 private network addresses, account UI, property names, or raw house data.
+
+## Contribution reporting checks
+
+`test_supervisor_logic` includes synthetic fixed/Flex, exact physical-zone,
+upcoming-run/skip/soak/cache/calendar and weather-unit regression tests.
+`test_reporting_homeassistant` is a separate process/environment against real
+Home Assistant 2026.10.4, installed with `requirements-homeassistant.txt` on
+Python 3.14. Do not combine it with the stub suite in one interpreter. See
+[reporting validation](../docs/contribution-reporting.md) for commands and limits.
+The existing CI runs the deterministic suite; the separate real-HA suite is an
+explicit local validation gate. No test contacts Rachio or waters a device.
